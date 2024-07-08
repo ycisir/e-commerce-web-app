@@ -13,7 +13,6 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.http import Http404
 
-
 class HomeView(View):
     def get(self, request):
         items = 0
