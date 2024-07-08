@@ -2,7 +2,6 @@ from django.urls import path
 from app import views
 from django.conf import settings
 from django.conf.urls.static import static
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('', views.HomeView.as_view(), name='home'),
@@ -48,4 +47,3 @@ urlpatterns = [
     path('bottom-wears/', views.bottom_wear, name='bottom-wears'),
     path('bottom-wear/<slug:data>', views.bottom_wear, name='bottom-wear-filter'),
 ]
-# urlpatterns += staticfiles_urlpatterns()
