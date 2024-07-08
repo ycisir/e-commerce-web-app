@@ -1,0 +1,65 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Search{% endblock title %}
+{% block main-content %}
+<div class="container my-5">
+  
+  <div class="col-sm-10 offset-1">
+    <h3>Searches</h3>
+    {{msg}}
+
+  <div class="card  mb-3">
+   <div class="card-body">
+    
+    {% if page_obj %}
+    {% for item in page_obj %}
+    
+  
+    <a href="{% url 'product-detail' item.id %}" class="">
+        <div class="row">
+
+            <div class="col-sm-3 text-center align-self-center">
+              <img src="{{item.product_image.url}}" alt="" srcset="" class="img-fluid img-thumbnail shadow-sm" height="100" width="100"> 
+            </div>
+            <div class="col-sm-9">
+             <div>
+              <h4>{{item.title}}</h4>
+              <h5 class="mb-2 text-muted small">{{item.description}}</h5>
+              
+              <div class="d-flex justify-content-between">
+               <p class="mb-0"><span><strong>${{item.discount_price}} <small class="fw-light text-decoration-line-through">${{item.selling_price}}</small></strong></span></p>
+              </div>
+             </div>
+            </div>
+            
+          </div>
+    </a>
+    
+    
+    <hr class="text-muted">
+    {% endfor %}
+    {% else %}
+    <p class="text-center">No results found!</p>
+    {% endif %}
+    
+    <div class="text-center">
+      <span>
+          {% if page_obj.has_previous %}
+              <a href="?page={{page_obj.previous_page_number}}">prev</a>
+          {% endif %}
+
+          <span>page {{page_obj.number}} of {{page_obj.paginator.num_pages}}</span>
+
+          {% if page_obj.has_next %}
+              <a href="?page={{page_obj.next_page_number}}">next</a>
+          {% endif %}
+      </span>
+  </div>
+
+     
+    
+   </div>
+   </div>
+</div>
+</div>
+{% endblock main-content %}
