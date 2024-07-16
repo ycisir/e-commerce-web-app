@@ -6,5 +6,7 @@ A full-fledged e-commerce web application built using the power of Django
 </blockquote>
 
 ## Running the web app locally
-+ Clone the repository
-  `git clone https://github.com/ycisir/ve3_task.git`
++ Clone the repository `git clone https://github.com/ycisir/e-commerce-web-app/`
++ Move into the repository `cd e-commerce-web-app`
++ Install the required packages `pip install -r requirements.txt`
++ Run the server `python manage.py runserver`
