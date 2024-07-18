@@ -2,7 +2,7 @@
 A full-fledged e-commerce web application built using the power of Django
 
 <blockquote>
-  Demo can be found <a href="https://e-commerce-web-app-production-8dfb.up.railway.app/">here</a>
+  Demo can be found <a href="https://e-commerce-web-app-nraj.onrender.com/">here</a>
 </blockquote>
 
 ## Running the web app locally
