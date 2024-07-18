@@ -27,8 +27,8 @@ SECRET_KEY = 'django-insecure-a$qv20g+oo$vu+wk7&v!-xvt3%p3(08342vboqn+h@_goo89s=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['e-commerce-web-app-ten-drab.vercel.app', '127.0.0.1']
-# DD_CSRF_TRUSTED_ORIGINS= ['https://e-commerce-web-app-production-8dfb.up.railway.app/']
+ALLOWED_HOSTS = ['.netlify.app', '127.0.0.1']
+DD_CSRF_TRUSTED_ORIGINS= ['.netlify.app']
 
 
 # Application definition
